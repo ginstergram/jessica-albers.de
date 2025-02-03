@@ -7,30 +7,38 @@ import {
 
 import Portfolio from '@components/Portfolio/Portfolio.astro'
 
-import logo from '../../public/logo.svg?raw'
+// import logo from '../../public/logo.svg?raw'
 
 const layout = {
     seo: {
-        title: 'Portfolio Template - Webcore',
-        url: 'https://webcoreui.dev/',
-        description: 'A customizable and easy to use template for portfolios.',
-        faviconUrl: '/logo.svg'
+        title: 'Jessica Albers',
+        url: 'https://jessica-albers.de',
+        description: '',
+        // faviconUrl: '/logo.svg'
     },
     menu: {
         logo: {
-            html: logo
+            // html: logo
         }
     },
     footer: {
         logo: {
-            html: logo
+            // html: logo
         },
         columns: [
             {
-                title: 'Contacts',
+                title: 'Kontakt',
                 items: [
                     { href: 'mailto:josh@example.com', name: 'john@example.com' },
-                    { href: 'tel:+1 234 5678', name: '+1 234 5678' }
+                    // { href: 'tel:+1 234 5678', name: '+1 234 5678' }
+                ]
+            },
+            {
+                title: 'Netzwerk',
+                items: [
+                    { href: '', name: 'ÖJN' },
+                    { href: '', name: '' },
+                    // { href: 'tel:+1 234 5678', name: '+1 234 5678' }
                 ]
             }
         ]
@@ -38,17 +46,17 @@ const layout = {
 }
 
 const hero = {
-    heading: 'Hey, I\'m Josh 👋',
-    subHeading: 'Senior React Developer based in Oregon',
+    heading: 'Jessica Albers',
+    subHeading: 'Biodiversitätsberatung',
     buttons: [
-        { text: 'Call Me', theme: 'success' as ButtonProps['theme'] },
-        { text: 'Send an Email', theme: 'outline' as ButtonProps['theme'] }
+        // { text: 'Call Me', theme: 'success' as ButtonProps['theme'] },
+        { text: 'Senden Sie mir eine Email', theme: 'outline' as ButtonProps['theme'] }
     ],
-    badge: {
-        rounded: true,
-        theme: 'outline' as ButtonProps['theme'],
-        text: '⭐ Top rated developer'
-    },
+    // badge: {
+    //     rounded: true,
+    //     theme: 'outline' as ButtonProps['theme'],
+    //     text: 'Top rated developer'
+    // },
     image: {
         src: '/img/placeholder-hd1.png',
         alt: 'Banner',
@@ -63,8 +71,8 @@ const aboutMe = {
     img: {
         src: '/img/avatar.png',
         alt: 'About me',
-        width: 250,
-        height: 250
+        width: 100,
+        height: 200
     },
     services: [
         'List of services provided by the person',
@@ -80,31 +88,31 @@ const aboutMe = {
     }))
 }
 
-const ratings = [
-    {
-        score: 5,
-        showText: true,
-        text: 'Rated for result',
-        feedback: '"He did an excellent job. The end result is what we wanted."'
-    },
-    {
-        score: 5,
-        showText: true,
-        text: 'Rated for design',
-        feedback: '"A thorough, reliable, precise professional who is demanding in his work! I can only recommend him!"'
-    },
-    {
-        score: 5,
-        showText: true,
-        text: 'Rated for communication',
-        feedback: '"Thank you for your work! It turned out very nice!"'
-    }
-]
+// const ratings = [
+//     {
+//         score: 5,
+//         showText: true,
+//         text: 'Rated for result',
+//         feedback: '"He did an excellent job. The end result is what we wanted."'
+//     },
+//     {
+//         score: 5,
+//         showText: true,
+//         text: 'Rated for design',
+//         feedback: '"A thorough, reliable, precise professional who is demanding in his work! I can only recommend him!"'
+//     },
+//     {
+//         score: 5,
+//         showText: true,
+//         text: 'Rated for communication',
+//         feedback: '"Thank you for your work! It turned out very nice!"'
+//     }
+// ]
 
-const ratingCta = {
-    text: 'More reviews',
-    theme: 'secondary' as ButtonProps['theme']
-}
+// const ratingCta = {
+//     text: 'More reviews',
+//     theme: 'secondary' as ButtonProps['theme']
+// }
 
 const myWork = {
     title: 'My Most Recent Work',
@@ -152,15 +160,31 @@ const servicesCta = {
     layout={layout}
     hero={hero}
     aboutMe={aboutMe}
-    ratings={ratings}
-    ratingCta={ratingCta}
     myWork={myWork}
     services={services}
     servicesCta={servicesCta}
 >
     <div slot="menu">
-        <a href="tel:+1 234 5678">+1 234 5678</a>
+        <a href="tel:+1 234 5678">+1 234 asdkjhasd</a>
         <span>•</span>
         <a href="mailto:josh@example.com">josh@example.com</a>
     </div>
 </Portfolio>
+
+
+
+<!-- <Portfolio
+    layout={layout}
+    hero={hero}
+    aboutMe={aboutMe}
+    ratings={ratings}
+    myWork={myWork}
+    services={services}
+    servicesCta={servicesCta}
+>
+    <div slot="menu">
+        <a href="tel:+1 234 5678">+1 234 asdkjhasd</a>
+        <span>•</span>
+        <a href="mailto:josh@example.com">josh@example.com</a>
+    </div>
+</Portfolio> -->
