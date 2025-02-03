@@ -9,6 +9,7 @@ import Portfolio from '@components/Portfolio/Portfolio.astro'
 
 // import logo from '../../public/logo.svg?raw'
 
+
 const layout = {
     seo: {
         title: 'Jessica Albers',
@@ -37,7 +38,7 @@ const layout = {
                 title: 'Netzwerk',
                 items: [
                     { href: '', name: 'ÖJN' },
-                    { href: '', name: '' },
+                    { href: '', name: 'LPV' },
                     // { href: 'tel:+1 234 5678', name: '+1 234 5678' }
                 ]
             }
@@ -66,21 +67,21 @@ const hero = {
 }
 
 const aboutMe = {
-    title: 'More About Me',
-    text: 'Description about the person, including previous work experiences, studies, and relevant projects. Anything that can establish credibility, experience, and expertise should be listed here to instill trustworthiness in the visitor. This field can also handle <code>HTML</code> tags for further formatting.',
-    img: {
-        src: '/img/avatar.png',
-        alt: 'About me',
-        width: 100,
-        height: 200
-    },
+    title: 'Über mich',
+    // text: 'Das ist was ich mache. ',
+    // img: {
+    //     src: '/img/avatar.png',
+    //     alt: 'About me',
+    //     width: 50,
+    //     height: 100
+    // },
     services: [
-        'List of services provided by the person',
-        'Broken into two columns on larger screens',
-        'Define a list of ratings',
-        'Create CTAs between blocks',
-        'Add your previous work',
-        'Provide a list of services'
+        'Biologie',
+        'Feldbotanik',
+        'Natur- und Landschaftsführungen',
+        // 'Create CTAs between blocks',
+        // 'Add your previous work',
+        // 'Provide a list of services'
     ].map(feature => ({
         icon: 'circle-check',
         color: 'var(--w-color-success)',
@@ -114,26 +115,24 @@ const aboutMe = {
 //     theme: 'secondary' as ButtonProps['theme']
 // }
 
-const myWork = {
-    title: 'My Most Recent Work',
-    items: Array
-        .from({ length: 3 }, (_, i) => i + 1)
-        .map(i => ({
-            href: '#',
-            img: {
-                src: `/img/placeholder${i}.png`,
-                alt: 'img',
-                width: 500,
-                height: 250
-            },
-            title: `My Work #${i}`,
-            text: 'You can also pass <b>HTML</b> tags to your cards.'
-        }))
-}
+
 
 const services = {
     secondary: true,
     items: [
+        {
+            // icon: 'info',
+            title: 'List of services',
+            text: 'Use the <code>GridWithIcons</code> block to organize your list into a grid with icons to enhance clarity and visual appeal.'
+        }, {
+            icon: 'alert',
+            title: 'Configurable',
+            text: 'You can create as many items as necessary with icons and an optional title. You can also configure the number of columns.'
+        }, {
+            icon: 'circle-check',
+            title: 'Supports formatting',
+            text: 'The <code>text</code> prop also supports formatting through <b>HTML</b> tags to help you customize the appearance of the element.'
+        },
         {
             icon: 'info',
             title: 'List of services',
@@ -150,24 +149,53 @@ const services = {
     ]
 }
 
-const servicesCta = {
-    text: 'Call Me',
-    theme: 'success' as ButtonProps['theme']
+
+const myWork = {
+    title: 'Referenzen',
+        // items: Array
+        // .from({ length: 3 }, (_, i) => i + 1)
+        // .map(i => ({
+        //     href: '#',
+        //     img: {
+        //         src: `/img/placeholder${i}.png`,
+        //         alt: 'img',
+        //         width: 500,
+        //         height: 250
+        //     },
+        //     title: `My Work #${i}`,
+        //     text: 'You can also pass <b>HTML</b> tags to your cards.'
+        // }))
+        
+    items: [
+        {title: `My Work #`,
+        href: '#',
+        img: {
+            src: `/img/placeholder1.png`,
+            alt: 'img',
+            width: 500,
+            height: 250},
+        text: 'You can also pass <b>HTML</b> tags to your cards.'
+        }
+
+    ]
 }
+
+
+// const servicesCta = {
+//     text: 'Call Me',
+//     theme: 'success' as ButtonProps['theme']
+// }
 ---
 
 <Portfolio
     layout={layout}
     hero={hero}
     aboutMe={aboutMe}
-    myWork={myWork}
     services={services}
-    servicesCta={servicesCta}
+    myWork={myWork}
 >
     <div slot="menu">
-        <a href="tel:+1 234 5678">+1 234 asdkjhasd</a>
-        <span>•</span>
-        <a href="mailto:josh@example.com">josh@example.com</a>
+        <!-- <span>•</span> -->
     </div>
 </Portfolio>
 
