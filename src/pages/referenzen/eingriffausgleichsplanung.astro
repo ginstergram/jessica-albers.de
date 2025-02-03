@@ -1,0 +1,61 @@
+---
+import {
+	Icon,
+    Menu,
+	type PaginationProps,
+	type ButtonProps
+} from 'webcoreui/astro'
+
+import Portfolio from '@components/Portfolio/Portfolio.astro'
+
+const layout = {
+    seo: {
+        title: 'Plan A Projekte',
+        url: 'https://jessica-albers.de',
+        description: 'Jessica Albers | Biologin & Agrarwissenschaftlerin',
+        // faviconUrl: '/logo.svg'
+    },
+    menu: {
+        logo: {
+            // html: logo
+        }
+    },
+    footer: {
+        logo: {
+            // html: logo
+        },
+        columns: [
+            {
+                title: 'Kontakt',
+                items: [
+                    { href: '"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#115;&#115;&#105;&#99;&#97;&#46;&#97;&#108;&#98;&#101;&#114;&#115;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;"',
+                    name: '+1 234 5678' }
+                ]
+            },
+            {
+                title: 'Netzwerk',
+                items: [
+                    { href: 'https://oejn.de/', name: 'Öko-Junglandwirte Netzwerk' },
+                    { href: 'https://lpv-wa-fkb.de/', name: 'Landschaftspflegeverband Waldeck-Frankenberg e. V.' },
+                    
+                    // { href: '', name: 'Christoph (10 Biotope)' },
+                    // { href: '', name: 'Juliane' },
+                    // { href: '', name: 'NABU' },
+                    // { href: '', name: 'Naturpark' },
+                    // { href: '', name: 'Tourist-Info Willingen' },
+                    // { href: '', name: 'Lotte (für Events und Werbung)' }
+
+                ]
+            }
+        ]
+    }
+}
+
+---
+
+<Portfolio
+    layout={layout}>
+</Portfolio>
+
+
+

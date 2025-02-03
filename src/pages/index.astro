@@ -7,6 +7,15 @@ import {
 
 import Portfolio from '@components/Portfolio/Portfolio.astro'
 
+// import { Menu } from 'webcoreui/astro'
+
+// const menu = [
+//     { name: 'Home', href: '/', active: true },
+//     { name: 'Test', href: '/test/', target: '_blank' }
+// ]
+
+// <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#115;&#115;&#105;&#99;&#97;&#46;&#97;&#108;&#98;&#101;&#114;&#115;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;">Email</a>
+
 
 const layout = {
     seo: {
@@ -15,11 +24,11 @@ const layout = {
         description: 'Jessica Albers | Biologin & Agrarwissenschaftlerin',
         // faviconUrl: '/logo.svg'
     },
-    menu: {
-        logo: {
-            // html: logo
-        }
-    },
+    // menu: {
+    //     logo: {
+    //         // html: logo
+    //     }
+    // },
     footer: {
         logo: {
             // html: logo
@@ -94,39 +103,9 @@ const aboutMe = {
     }))
 }
 
-// const ratings = [
-//     {
-//         score: 5,
-//         showText: true,
-//         text: 'Rated for result',
-//         feedback: '"He did an excellent job. The end result is what we wanted."'
-//     },
-//     {
-//         score: 5,
-//         showText: true,
-//         text: 'Rated for design',
-//         feedback: '"A thorough, reliable, precise professional who is demanding in his work! I can only recommend him!"'
-//     },
-//     {
-//         score: 5,
-//         showText: true,
-//         text: 'Rated for communication',
-//         feedback: '"Thank you for your work! It turned out very nice!"'
-//     }
-// ]
-
-// const ratingCta = {
-//     text: 'More reviews',
-//     theme: 'secondary' as ButtonProps['theme']
-// }
-
-
-
-
-
-
 const services = {
     secondary: true,
+    columns: 3, 
     items: [
         {
             // icon: 'info',
@@ -160,30 +139,43 @@ const services = {
 
 const myWork = {
     title: 'Referenzen',
-        // items: Array
-        // .from({ length: 3 }, (_, i) => i + 1)
-        // .map(i => ({
-        //     href: '#',
-        //     img: {
-        //         src: `/img/placeholder${i}.png`,
-        //         alt: 'img',
-        //         width: 500,
-        //         height: 250
-        //     },
-        //     title: `My Work #${i}`,
-        //     text: 'You can also pass <b>HTML</b> tags to your cards.'
-        // }))
-        
     items: [
-        {title: `My Work #`,
-        href: '#',
+        {title: 'Eingriffs-/Ausgleichsplanung',
+        // href: '/referenzen/eingriffausgleichsplanung',
         img: {
-            src: `/img/placeholder1.png`,
+            src: `/img/distel.jpeg`,
             alt: 'img',
-            width: 500,
-            height: 250},
-        text: 'You can also pass <b>HTML</b> tags to your cards.'
-        }
+            width: 200,
+            height: 350},
+        text: 'Seit 2023'
+        },
+        {title: '10 Biotope Projekt Allgäu',
+        // href: '/referenzen/eingriffausgleichsplanung',
+        img: {
+            src: `/img/distel.jpeg`,
+            alt: 'img',
+            width: 200,
+            height: 350},
+        text: 'Seit 2023'
+        },
+        {title: 'Naturdenkmal-Pflege',
+        // href: '/referenzen/eingriffausgleichsplanung',
+        img: {
+            src: `/img/distel.jpeg`,
+            alt: 'img',
+            width: 200,
+            height: 350},
+        text: 'Seit 2023'
+        },
+        {title: 'Naturdenkmal-Pflege',
+        // href: '/referenzen/eingriffausgleichsplanung',
+        img: {
+            src: `/img/distel.jpeg`,
+            alt: 'img',
+            width: 200,
+            height: 350},
+        text: 'Seit 2023'
+        },
 
     ]
 }
@@ -193,18 +185,19 @@ const myWork = {
 //     text: 'Call Me',
 //     theme: 'success' as ButtonProps['theme']
 // }
+
 ---
+
+<!-- <Menu
+    items={menu}
+    wrapperClassName="left-aligned"
+/> -->
 
 <Portfolio
     layout={layout}
     hero={hero}
     aboutMe={aboutMe}
     services={services}
-    myWork={myWork}
->
-    <div slot="menu">
-        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#115;&#115;&#105;&#99;&#97;&#46;&#97;&#108;&#98;&#101;&#114;&#115;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;">Email</a>
-        <!-- <span>•</span> -->
-    </div>
+    myWork={myWork}>
 </Portfolio>
 
