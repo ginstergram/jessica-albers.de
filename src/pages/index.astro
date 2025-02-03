@@ -7,14 +7,12 @@ import {
 
 import Portfolio from '@components/Portfolio/Portfolio.astro'
 
-// import logo from '../../public/logo.svg?raw'
-
 
 const layout = {
     seo: {
-        title: 'Jessica Albers',
+        title: 'Plan A Projekte',
         url: 'https://jessica-albers.de',
-        description: '',
+        description: 'Jessica Albers | Biologin & Agrarwissenschaftlerin',
         // faviconUrl: '/logo.svg'
     },
     menu: {
@@ -30,16 +28,23 @@ const layout = {
             {
                 title: 'Kontakt',
                 items: [
-                    { href: 'mailto:josh@example.com', name: 'john@example.com' },
-                    // { href: 'tel:+1 234 5678', name: '+1 234 5678' }
+                    { href: '"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#115;&#115;&#105;&#99;&#97;&#46;&#97;&#108;&#98;&#101;&#114;&#115;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;"',
+                    name: '+1 234 5678' }
                 ]
             },
             {
                 title: 'Netzwerk',
                 items: [
-                    { href: '', name: 'ÖJN' },
-                    { href: '', name: 'LPV' },
-                    // { href: 'tel:+1 234 5678', name: '+1 234 5678' }
+                    { href: 'https://oejn.de/', name: 'Öko-Junglandwirte Netzwerk' },
+                    { href: 'https://lpv-wa-fkb.de/', name: 'Landschaftspflegeverband Waldeck-Frankenberg e. V.' },
+                    
+                    // { href: '', name: 'Christoph (10 Biotope)' },
+                    // { href: '', name: 'Juliane' },
+                    // { href: '', name: 'NABU' },
+                    // { href: '', name: 'Naturpark' },
+                    // { href: '', name: 'Tourist-Info Willingen' },
+                    // { href: '', name: 'Lotte (für Events und Werbung)' }
+
                 ]
             }
         ]
@@ -47,11 +52,11 @@ const layout = {
 }
 
 const hero = {
-    heading: 'Jessica Albers',
+    heading: 'Plan A Projekte',
     subHeading: 'Biodiversitätsberatung | Feldbotanik | Natur- und Landschaftsführungen',
     buttons: [
         // { text: 'Call Me', theme: 'success' as ButtonProps['theme'] },
-        { text: 'Senden Sie mir eine Email', theme: 'outline' as ButtonProps['theme'] }
+        // { text: 'Senden Sie mir eine Email', theme: 'outline' as ButtonProps['theme'] }
     ],
     // badge: {
     //     rounded: true,
@@ -59,10 +64,10 @@ const hero = {
     //     text: 'Top rated developer'
     // },
     image: {
-        src: '/img/placeholder-hd1.png',
+        src: '/img/hummel.jpeg',
         alt: 'Banner',
-        width: 500,
-        height: 300
+        width: 200,
+        height: 500
     }
 }
 
@@ -72,8 +77,8 @@ const aboutMe = {
     img: {
         src: '/img/avatar.png',
         alt: 'About me',
-        width: 150,
-        height: 400
+        width: 100,
+        height: 300
     },
     services: [
         'Artenvielfalt fördern – Quadratmeter für Quadratmeter',
@@ -114,6 +119,9 @@ const aboutMe = {
 //     text: 'More reviews',
 //     theme: 'secondary' as ButtonProps['theme']
 // }
+
+
+
 
 
 
@@ -195,24 +203,8 @@ const myWork = {
     myWork={myWork}
 >
     <div slot="menu">
+        <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#115;&#115;&#105;&#99;&#97;&#46;&#97;&#108;&#98;&#101;&#114;&#115;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;">Email</a>
         <!-- <span>•</span> -->
     </div>
 </Portfolio>
 
-
-
-<!-- <Portfolio
-    layout={layout}
-    hero={hero}
-    aboutMe={aboutMe}
-    ratings={ratings}
-    myWork={myWork}
-    services={services}
-    servicesCta={servicesCta}
->
-    <div slot="menu">
-        <a href="tel:+1 234 5678">+1 234 asdkjhasd</a>
-        <span>•</span>
-        <a href="mailto:josh@example.com">josh@example.com</a>
-    </div>
-</Portfolio> -->
