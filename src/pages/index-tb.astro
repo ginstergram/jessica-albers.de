@@ -1,0 +1,203 @@
+---
+import {
+	Icon,
+	type PaginationProps,
+	type ButtonProps
+} from 'webcoreui/astro'
+
+import Portfolio from '@components/Portfolio/Portfolio.astro'
+
+// import { Menu } from 'webcoreui/astro'
+
+// const menu = [
+//     { name: 'Home', href: '/', active: true },
+//     { name: 'Test', href: '/test/', target: '_blank' }
+// ]
+
+// <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#115;&#115;&#105;&#99;&#97;&#46;&#97;&#108;&#98;&#101;&#114;&#115;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;">Email</a>
+
+
+const layout = {
+    seo: {
+        title: 'Plan A Projekte',
+        url: 'https://jessica-albers.de',
+        description: 'Jessica Albers | Biologin & Agrarwissenschaftlerin',
+        // faviconUrl: '/logo.svg'
+    },
+    // menu: {
+    //     logo: {
+    //         // html: logo
+    //     }
+    // },
+    footer: {
+        logo: {
+            // html: logo
+        },
+        columns: [
+            {
+                title: 'Kontakt',
+                items: [
+                    { href: '"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#106;&#101;&#115;&#115;&#105;&#99;&#97;&#46;&#97;&#108;&#98;&#101;&#114;&#115;&#64;&#109;&#97;&#105;&#108;&#98;&#111;&#120;&#46;&#111;&#114;&#103;"',
+                    name: '+1 234 5678' }
+                ]
+            },
+            {
+                title: 'Netzwerk',
+                items: [
+                    { href: 'https://oejn.de/', name: 'Öko-Junglandwirte Netzwerk' },
+                    { href: 'https://lpv-wa-fkb.de/', name: 'Landschaftspflegeverband Waldeck-Frankenberg e. V.' },
+                    
+                    // { href: '', name: 'Christoph (10 Biotope)' },
+                    // { href: '', name: 'Juliane' },
+                    // { href: '', name: 'NABU' },
+                    // { href: '', name: 'Naturpark' },
+                    // { href: '', name: 'Tourist-Info Willingen' },
+                    // { href: '', name: 'Lotte (für Events und Werbung)' }
+
+                ]
+            }
+        ]
+    }
+}
+
+const hero = {
+    heading: 'Plan A Projekte',
+    subHeading: 'Biodiversitätsberatung | Feldbotanik | Natur- und Landschaftsführungen',
+    buttons: [
+        // { text: 'Call Me', theme: 'success' as ButtonProps['theme'] },
+        // { text: 'Senden Sie mir eine Email', theme: 'outline' as ButtonProps['theme'] }
+    ],
+    // badge: {
+    //     rounded: true,
+    //     theme: 'outline' as ButtonProps['theme'],
+    //     text: 'Top rated developer'
+    // },
+    image: {
+        src: '/img/hummel.jpeg',
+        alt: 'Banner',
+        width: 200,
+        height: 500
+    }
+}
+
+const aboutMe = {
+    title: 'Über mich',
+    // text: 'Das ist was ich mache. ',
+    img: {
+        src: '/img/avatar.png',
+        alt: 'About me',
+        width: 100,
+        height: 300
+    },
+    services: [
+        'Artenvielfalt fördern – Quadratmeter für Quadratmeter',
+        'Landwirtschaft, Naturschutz und Gesellschaft zusammenbringen – für mehr Artenvielfalt',
+        'Unsere Umwelt reicher machen – mehr Pflanzenarten für alle',
+        'Naturschutz ist kein Schimpfwort',
+        'Nachhaltigkeit, Artenvielfalt, Leben und Lebensmittelerzeugung verbinden',
+        'Biodiversitätsberatung als multifunktionales Lösungstool – Leben, Umwelt und Wirtschaft zusammendenken'
+    ].map(feature => ({
+        icon: 'circle-check',
+        color: 'var(--w-color-success)',
+        text: feature
+    }))
+}
+
+const services = {
+    secondary: true,
+    columns: 3, 
+    items: [
+        {
+            // icon: 'info',
+            title: 'List of services',
+            text: 'Use the <code>GridWithIcons</code> block to organize your list into a grid with icons to enhance clarity and visual appeal.'
+        }, {
+            icon: 'alert',
+            title: 'Configurable',
+            text: 'You can create as many items as necessary with icons and an optional title. You can also configure the number of columns.'
+        }, {
+            icon: 'circle-check',
+            title: 'Supports formatting',
+            text: 'The <code>text</code> prop also supports formatting through <b>HTML</b> tags to help you customize the appearance of the element.'
+        },
+        {
+            icon: 'info',
+            title: 'List of services',
+            text: 'Use the <code>GridWithIcons</code> block to organize your list into a grid with icons to enhance clarity and visual appeal.'
+        }, {
+            icon: 'alert',
+            title: 'Configurable',
+            text: 'You can create as many items as necessary with icons and an optional title. You can also configure the number of columns.'
+        }, {
+            icon: 'circle-check',
+            title: 'Supports formatting',
+            text: 'The <code>text</code> prop also supports formatting through <b>HTML</b> tags to help you customize the appearance of the element.'
+        }
+    ]
+}
+
+
+const myWork = {
+    title: 'Referenzen',
+    items: [
+        {title: 'Eingriffs-/Ausgleichsplanung',
+        // href: '/referenzen/eingriffausgleichsplanung',
+        img: {
+            src: `/img/distel.jpeg`,
+            alt: 'img',
+            width: 200,
+            height: 350},
+        text: 'Seit 2023'
+        },
+        {title: '10 Biotope Projekt Allgäu',
+        // href: '/referenzen/eingriffausgleichsplanung',
+        img: {
+            src: `/img/distel.jpeg`,
+            alt: 'img',
+            width: 200,
+            height: 350},
+        text: 'Seit 2023'
+        },
+        {title: 'Naturdenkmal-Pflege',
+        // href: '/referenzen/eingriffausgleichsplanung',
+        img: {
+            src: `/img/distel.jpeg`,
+            alt: 'img',
+            width: 200,
+            height: 350},
+        text: 'Seit 2023'
+        },
+        {title: 'Naturdenkmal-Pflege',
+        // href: '/referenzen/eingriffausgleichsplanung',
+        img: {
+            src: `/img/distel.jpeg`,
+            alt: 'img',
+            width: 200,
+            height: 350},
+        text: 'Seit 2023'
+        },
+
+    ]
+}
+
+
+// const servicesCta = {
+//     text: 'Call Me',
+//     theme: 'success' as ButtonProps['theme']
+// }
+
+---
+
+<!-- <Menu
+    items={menu}
+    wrapperClassName="left-aligned"
+/> -->
+
+<Portfolio
+    layout={layout}
+    hero={hero}
+    aboutMe={aboutMe}
+    services={services}
+    myWork={myWork}>
+</Portfolio>
+
