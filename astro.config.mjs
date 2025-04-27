@@ -8,7 +8,6 @@ export default defineConfig({
             noExternal: ['webcoreui']
         }
     },
-    output: "static",
-    base: "/",
+    site: 'https://ginstergram.github.io/jessica-albers.de/',
 })
 
