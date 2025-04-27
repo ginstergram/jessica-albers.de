@@ -15,6 +15,7 @@ interface Props extends HeroProps {}
 const {
     heading,
     subHeading,
+    text,
     buttons,
     badge,
     image,
@@ -39,6 +40,7 @@ const classes = [
             </Badge>
         )}
         <h1>{heading}</h1>
+        <h2>{text}</h2>
         {subHeading && <h2>{subHeading}</h2>}
 
         {!!buttons?.length && (

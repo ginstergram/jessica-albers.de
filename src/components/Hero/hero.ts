@@ -7,6 +7,7 @@ import type {
 export type HeroProps = {
     heading: string
     subHeading?: string
+    text?: string
     buttons?: ({
         text: string
         icon?: IconProps['type'] | string
