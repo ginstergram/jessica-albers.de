@@ -9,6 +9,6 @@ export default defineConfig({
         }
     },
     // site: 'https://ginstergram.github.io/jessica-albers.de/',
-    // base: '/jessica-albers.de/',
+    base: '/jessica-albers.de/',
 })
 
