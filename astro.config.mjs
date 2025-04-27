@@ -8,6 +8,7 @@ export default defineConfig({
             noExternal: ['webcoreui']
         }
     },
-    site: 'https://ginstergram.github.io/jessica-albers.de/',
+    // site: 'https://ginstergram.github.io/jessica-albers.de/',
+    // base: '/jessica-albers.de/',
 })
 
