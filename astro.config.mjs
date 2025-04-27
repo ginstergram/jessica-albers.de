@@ -7,5 +7,8 @@ export default defineConfig({
         ssr: {
             noExternal: ['webcoreui']
         }
-    }
+    },
+    output: "static",
+    base: "/",
 })
+
