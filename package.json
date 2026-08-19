@@ -10,8 +10,8 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/check": "0.9.4",
-        "astro": "^7.1.4",
+        "@astrojs/check": "^0.9.10",
+        "astro": "^7.2.3",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "sass": "1.83.4",
